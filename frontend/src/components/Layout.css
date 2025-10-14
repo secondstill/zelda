@@ -1,0 +1,146 @@
+/* Layout.css */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-main {
+  flex: 1;
+  margin-left: 280px;
+  min-height: 100vh;
+  width: calc(100% - 280px);
+  position: relative;
+}
+
+.content-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Auth Welcome Page */
+.auth-welcome-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.welcome-content {
+  max-width: 600px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.welcome-content > p {
+  font-size: 1.25rem;
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  text-align: left;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.feature h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.auth-instruction {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+@media (max-width: 768px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .app-main,
+  .content-page {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .content-page {
+    padding: 1rem;
+  }
+  
+  .auth-welcome-page {
+    padding: 1rem;
+  }
+  
+  .welcome-content {
+    padding: 2rem;
+  }
+  
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,136 @@
+/* Auth Pages Specific Styles */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-header p {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #667eea;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.auth-footer p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.auth-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.auth-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Loading spinner for auth buttons */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design for auth pages */
+@media (max-width: 768px) {
+  .auth-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .auth-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1rem;
+  }
+  
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .auth-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-form {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,318 @@
+/* Settings Page Styles */
+.settings-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.settings-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.settings-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.settings-header p {
+  color: #ececec;
+  font-size: 1.1rem;
+}
+
+.settings-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+/* Settings Sidebar */
+.settings-sidebar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 0 0 20px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 500;
+}
+
+.tab-btn.logout {
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn.logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff6b6b;
+}
+
+/* Settings Main Content */
+.settings-main {
+  padding: 2.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 0 20px 20px 0;
+}
+
+.settings-section {
+  max-width: 600px;
+}
+
+.settings-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Profile Section */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.profile-info p {
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.username {
+  color: #667eea;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Form Styles - Fixed text colors */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+  color: #2d3748; /* Fixed: Ensure text is dark and visible */
+}
+
+.form-group input::placeholder {
+  color: #a0aec0; /* Fixed: Ensure placeholder text is visible */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  color: #2d3748; /* Fixed: Ensure focused text is visible */
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Security Section */
+.security-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.security-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.security-info p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.security-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Success and Error Messages */
+.success-message {
+  background: #c6f6d5;
+  color: #2f855a;
+  border: 1px solid #9ae6b4;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 1rem;
+  }
+  
+  .settings-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .settings-sidebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .tab-btn {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+    min-width: auto;
+  }
+  
+  .tab-btn.logout {
+    margin-top: 0;
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .settings-main {
+    padding: 1.5rem;
+  }
+  
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-header h1 {
+    font-size: 2rem;
+  }
+  
+  .settings-main {
+    padding: 1rem;
+  }
+  
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .profile-card {
+    padding: 1rem;
+  }
+}

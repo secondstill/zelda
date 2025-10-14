@@ -1,0 +1,227 @@
+/* Global Layout CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Global App Container */
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar Layout - Fixed Left Sidebar */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Fixed Sidebar */
+.app-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Area - Always to the right of sidebar */
+.app-main {
+  flex: 1;
+  margin-left: 280px;
+  min-height: 100vh;
+  width: calc(100% - 280px);
+  position: relative;
+}
+
+/* Page Content Wrapper */
+.page-wrapper {
+  min-height: 100vh;
+  padding: 0;
+  background: transparent;
+}
+
+/* Auth Pages (Login/Signup) Specific Layout */
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Content Pages Layout */
+.content-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .app-main,
+  .auth-page,
+  .content-page {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .page-wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-page,
+  .content-page {
+    padding: 1rem;
+  }
+  
+  .page-wrapper {
+    padding: 0.5rem;
+  }
+}
+
+/* Global Utility Classes */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Global Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Global Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Global Form Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Global Error/Success Messages */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.alert-success {
+  background: #c6f6d5;
+  color: #2f855a;
+  border: 1px solid #9ae6b4;
+}
+
+.alert-info {
+  background: #bee3f8;
+  color: #2c5282;
+  border: 1px solid #90cdf4;
+}

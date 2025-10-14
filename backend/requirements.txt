@@ -1,0 +1,8 @@
+Flask==3.1.1
+Flask-CORS==5.0.0
+Flask-JWT-Extended==4.6.0
+requests==2.32.4
+SpeechRecognition==3.10.4
+pyaudio>=0.2.11
+pydub>=0.25.1
+openai>=1.0.0
